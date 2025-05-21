@@ -1,0 +1,221 @@
+html, body {
+  height: 100vh;
+  background: url('/assets/svg/background.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+.notepad-wrapper {
+  position: relative;
+  width: 40em;
+  height: 50rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notepad-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('/assets/notepad-bg.png') no-repeat center top;
+  background-size: contain;
+  z-index: 0;
+}
+
+.notepad-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.notepad-title {
+  font-size: 6.25rem;
+  margin: 2rem 0 0.65rem 0;
+  line-height: 1;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  width: 16.25rem;
+  margin: 2.5rem 0 1.25rem 0;
+}
+
+.square {
+  width: 5rem;
+  height: 5rem;
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgb(55, 55, 55);
+  border: 0.15rem solid #555;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square:hover {
+  background-color: #fff1c48c;
+}
+
+.square.highlight{
+  background-color: #ff8a8a;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+
+.newGame {
+  background-color: #e3caa5;
+  border: none;
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.newGame:hover {
+  background-color: #d3b489;
+}
+
+@media (max-width: 480px) {
+  .notepad-wrapper {
+    width: 15rem;
+    height: auto;
+    padding: 0;
+  }
+  .notepad-content {
+    padding: 0;
+  }
+  .notepad-title {
+    font-size: 10vw;
+    margin: 3rem 0 0 0;
+  }
+
+  .board {
+    gap: 0.1rem;
+    width: 6rem;
+    margin: 1rem 0;
+  }
+  .square {
+    width: 2rem;
+    height: 2rem;
+    font-size: 2rem;
+  }
+  .newGame {
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.3rem;
+    font-size: 2.75vw;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (479px < width < 769px) {
+  .notepad-wrapper {
+    width: 25rem;
+    height: auto;
+    padding: 0;
+  }
+  .notepad-title {
+    font-size: 10vw;
+    margin: 0;
+  }
+
+  .board {
+    gap: 0.2rem;
+    width: 12rem;
+    margin: 0;
+  }
+
+  .square {
+    width: 4rem;
+    height: 4rem;
+    font-size: 4rem;
+  }
+  .newGame {
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.3rem;
+    font-size: 2vw;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media (768px < width < 1025px) {
+  .notepad-wrapper {
+    width: 25rem;
+    height: auto;
+    padding: 0;
+  }
+  .notepad-title {
+    font-size: 6vw;
+    margin: 1rem;
+  }
+
+  .board {
+    gap: 0.2rem;
+    width: 10rem;
+    margin: 0;
+  }
+
+  .square {
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+  }
+  .newGame {
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.3rem;
+    font-size: 1.5vw;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+}
+
+@media (1024px < width < 1441px) {
+  .notepad-wrapper {
+    width: 25rem;
+    height: auto;
+    padding: 0;
+  }
+  .notepad-title {
+    font-size: 4.75vw;
+    margin: 1rem;
+  }
+
+  .board {
+    gap: 0.2rem;
+    width: 10rem;
+    margin: 0;
+  }
+
+  .square {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 3.5rem;
+  }
+  .newGame {
+    padding: 0.6rem 0.75rem;
+    border-radius: 0.3rem;
+    font-size: 1vw;
+    margin-top: 1.5rem;
+    margin-bottom: 0rem;
+  }
+}
