@@ -1,15 +1,19 @@
-html, body {
-  height: 100vh;
+:root{
+height: 100vh;
   background: url('/assets/svg/background.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   overflow: hidden;
+}
+
+html, body {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Courier New', Courier, monospace;
 }
+
 .notepad-wrapper {
   position: relative;
   width: 40em;
